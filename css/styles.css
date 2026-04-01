@@ -1,0 +1,29 @@
+/* Neomorphism surface — light mode */
+.neo {
+  background: #e0e5ec;
+  box-shadow: 6px 6px 12px #b8bec7, -6px -6px 12px #ffffff;
+  border-radius: 12px;
+}
+
+/* Neomorphism surface — dark mode */
+.dark .neo {
+  background: #1e2130;
+  box-shadow: 6px 6px 12px #141620, -6px -6px 12px #282a3a;
+}
+
+/* Neomorphism button — base */
+.neo-btn {
+  transition: box-shadow 0.15s ease, transform 0.15s ease;
+}
+
+/* Neomorphism button — hover (lift) */
+.neo-btn:hover {
+  box-shadow: 2px 2px 6px #b8bec7, -2px -2px 6px #ffffff;
+  transform: translateY(-1px);
+}
+
+/* Neomorphism button — active (inset press) */
+.neo-btn:active {
+  box-shadow: inset 3px 3px 6px #b8bec7, inset -3px -3px 6px #ffffff;
+  transform: translateY(0);
+}
