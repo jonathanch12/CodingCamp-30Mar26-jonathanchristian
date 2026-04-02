@@ -1,29 +1,192 @@
-/* Neomorphism surface — light mode */
-.neo {
-  background: #e0e5ec;
-  box-shadow: 6px 6px 12px #b8bec7, -6px -6px 12px #ffffff;
-  border-radius: 12px;
+/* ============================================================
+   App background
+   ============================================================ */
+.app-bg {
+  background-color: #eef0f5;
+}
+.dark .app-bg {
+  background-color: #1a1a1e;
 }
 
-/* Neomorphism surface — dark mode */
-.dark .neo {
-  background: #1e2130;
-  box-shadow: 6px 6px 12px #141620, -6px -6px 12px #282a3a;
+/* ============================================================
+   Neo-card — main surface
+   ============================================================ */
+.neo-card {
+  background: #f0f2f7;
+  box-shadow: 6px 6px 14px #c8ccd6, -6px -6px 14px #ffffff;
+  border-radius: 16px;
+}
+.dark .neo-card {
+  background: #242428;
+  box-shadow: 6px 6px 14px #141416, -6px -6px 14px #2e2e34;
 }
 
-/* Neomorphism button — base */
-.neo-btn {
-  transition: box-shadow 0.15s ease, transform 0.15s ease;
+/* ============================================================
+   Neo-input — text inputs and selects
+   ============================================================ */
+.neo-input {
+  background: #e8eaf0;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 14px;
+  color: inherit;
+  box-shadow: inset 3px 3px 7px #c8ccd6, inset -3px -3px 7px #ffffff;
+  outline: none;
+  transition: box-shadow 0.15s ease;
+}
+.neo-input:focus {
+  box-shadow: inset 4px 4px 8px #b8bcc6, inset -4px -4px 8px #ffffff,
+              0 0 0 2px #3b82f6;
+}
+.dark .neo-input {
+  background: #1e1e22;
+  color: #e0e0e8;
+  box-shadow: inset 3px 3px 7px #111114, inset -3px -3px 7px #2a2a30;
+}
+.dark .neo-input:focus {
+  box-shadow: inset 4px 4px 8px #111114, inset -4px -4px 8px #2a2a30,
+              0 0 0 2px #60a5fa;
+}
+.neo-input::placeholder {
+  color: #a0a4b0;
+}
+.dark .neo-input::placeholder {
+  color: #5a5a68;
 }
 
-/* Neomorphism button — hover (lift) */
-.neo-btn:hover {
-  box-shadow: 2px 2px 6px #b8bec7, -2px -2px 6px #ffffff;
+/* ============================================================
+   Neo-btn-primary — Add Transaction button
+   ============================================================ */
+.neo-btn-primary {
+  background: #3b82f6;
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 20px;
+  cursor: pointer;
+  box-shadow: 4px 4px 10px #c8ccd6, -4px -4px 10px #ffffff;
+  transition: box-shadow 0.15s ease, transform 0.15s ease, background 0.15s ease;
+}
+.neo-btn-primary:hover {
+  background: #2563eb;
+  box-shadow: 2px 2px 6px #c8ccd6, -2px -2px 6px #ffffff;
   transform: translateY(-1px);
 }
-
-/* Neomorphism button — active (inset press) */
-.neo-btn:active {
-  box-shadow: inset 3px 3px 6px #b8bec7, inset -3px -3px 6px #ffffff;
+.neo-btn-primary:active {
+  box-shadow: inset 3px 3px 7px rgba(0,0,0,0.2);
   transform: translateY(0);
+}
+.dark .neo-btn-primary {
+  box-shadow: 4px 4px 10px #111114, -4px -4px 10px #2e2e34;
+}
+.dark .neo-btn-primary:hover {
+  box-shadow: 2px 2px 6px #111114, -2px -2px 6px #2e2e34;
+}
+
+/* ============================================================
+   Neo-btn-secondary — Create Category button
+   ============================================================ */
+.neo-btn-secondary {
+  background: #f0f2f7;
+  color: #374151;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 20px;
+  cursor: pointer;
+  box-shadow: 4px 4px 10px #c8ccd6, -4px -4px 10px #ffffff;
+  transition: box-shadow 0.15s ease, transform 0.15s ease;
+}
+.neo-btn-secondary:hover {
+  box-shadow: 2px 2px 6px #c8ccd6, -2px -2px 6px #ffffff;
+  transform: translateY(-1px);
+}
+.neo-btn-secondary:active {
+  box-shadow: inset 3px 3px 7px #c8ccd6, inset -3px -3px 7px #ffffff;
+  transform: translateY(0);
+}
+.dark .neo-btn-secondary {
+  background: #2a2a30;
+  color: #d0d0dc;
+  box-shadow: 4px 4px 10px #111114, -4px -4px 10px #333338;
+}
+.dark .neo-btn-secondary:hover {
+  box-shadow: 2px 2px 6px #111114, -2px -2px 6px #333338;
+}
+.dark .neo-btn-secondary:active {
+  box-shadow: inset 3px 3px 7px #111114, inset -3px -3px 7px #333338;
+}
+
+/* ============================================================
+   Neo-toggle — floating theme toggle button
+   ============================================================ */
+.neo-toggle {
+  background: #f0f2f7;
+  color: #374151;
+  border: none;
+  cursor: pointer;
+  box-shadow: 4px 4px 10px #c8ccd6, -4px -4px 10px #ffffff;
+  transition: box-shadow 0.15s ease, transform 0.15s ease;
+}
+.neo-toggle:hover {
+  box-shadow: 2px 2px 6px #c8ccd6, -2px -2px 6px #ffffff;
+  transform: translateY(-1px);
+}
+.neo-toggle:active {
+  box-shadow: inset 3px 3px 7px #c8ccd6, inset -3px -3px 7px #ffffff;
+  transform: translateY(0);
+}
+.dark .neo-toggle {
+  background: #2a2a30;
+  color: #d0d0dc;
+  box-shadow: 4px 4px 10px #111114, -4px -4px 10px #333338;
+}
+.dark .neo-toggle:hover {
+  box-shadow: 2px 2px 6px #111114, -2px -2px 6px #333338;
+}
+.dark .neo-toggle:active {
+  box-shadow: inset 3px 3px 7px #111114, inset -3px -3px 7px #333338;
+}
+
+/* ============================================================
+   Field label — uppercase spaced style
+   ============================================================ */
+.field-label {
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  color: #9ca3af;
+  text-transform: uppercase;
+}
+.dark .field-label {
+  color: #6b7280;
+}
+
+/* ============================================================
+   Transaction list item delete button
+   ============================================================ */
+.delete-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: #ef4444;
+  border-radius: 8px;
+  padding: 6px;
+  min-height: 44px;
+  min-width: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.15s ease, background 0.15s ease;
+}
+.delete-btn:hover {
+  color: #b91c1c;
+  background: rgba(239, 68, 68, 0.08);
+}
+
+/* ============================================================
+   Light-mode only: dropdown option text color
+   ============================================================ */
+#category-select option,
+#sort-select option {
+  color: #a0a4b0;
 }
